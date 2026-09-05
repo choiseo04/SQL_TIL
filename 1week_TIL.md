@@ -94,11 +94,14 @@ SQL_BASIC 정규 과제는 매주 정해진 분량의 `초보자를 위한 BigQu
 아래 중 하나 이상을 첨부해주세요.
 
 - 강의 수강 화면 캡처
-![강의수강화면캡처](./images/week1.강의수강인증.png)
+
+
+![강의수강화면캡처](./images/week1.png)
+
 - 이번 주 학습 내용을 정리한 노트 캡처
-![강의노트](./images/week1.강의노트1.png)
-![강의노트](./images/week1.강의노트2.png)
-![강의노트](./images/week1.강의노트3.png)
+![강의노트](./images/week1_1.png)
+![강의노트](./images/week1_2.png)
+![강의노트](./images/week1_3.png)
 ---
 
 # 3️⃣ 확인 문제
