@@ -109,7 +109,15 @@ SELECT A.col1, A.col2, B.col1 1, B.col1 2 FROM table 1 AS A LEFT JOIN table2 AS 
 아래 중 하나 이상을 첨부해주세요.
 
 - 강의 수강 화면 캡처
+![강의수강](./images/week6-1.png)
+
 - JOIN 문제 풀이 정답 화면 캡처
+![문제풀이1](./images/week6-5.png)
+![문제풀이2](./images/week6-6.png)
+![문제풀이3](./images/week6-7.png)
+![문제풀이4](./images/week6-8.png)
+![문제풀이5](./images/week6-9.png)
+
 - JOIN 전후 결과 row 수를 비교한 캡처 또는 메모
 
 ---
@@ -130,7 +138,7 @@ SELECT A.col1, A.col2, B.col1 1, B.col1 2 FROM table 1 AS A LEFT JOIN table2 AS 
 - 날짜를 출력한 형식: YYYY-MM-DD
 ```
 
-<!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. -->
+![문제풀이1](./images/week6-5.png)
 
 ## 🧩 문제 2
 
@@ -144,7 +152,7 @@ SELECT A.col1, A.col2, B.col1 1, B.col1 2 FROM table 1 AS A LEFT JOIN table2 AS 
 - 집계한 값: SUM(PRICE * SALES_AMOUNT)
 ```
 
-<!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. -->
+![문제풀이2](./images/week6-6.png)
 
 ## 🧩 문제 3
 
@@ -158,7 +166,7 @@ SELECT A.col1, A.col2, B.col1 1, B.col1 2 FROM table 1 AS A LEFT JOIN table2 AS 
 - NULL이 발생하는 경우: ANIMAL_ID는 존재하는데(보호소에 들어온 기록은 존재하는데) 이름이 NULL인 경우 
 ```
 
-<!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. -->
+![문제풀이4](./images/week6-8.png)
 
 ## 🧩 문제 4
 
@@ -173,7 +181,7 @@ SELECT A.col1, A.col2, B.col1 1, B.col1 2 FROM table 1 AS A LEFT JOIN table2 AS 
 - 정렬 기준: A(ANIMAL_INS).DATETIME ASC(오름차순)
 ```
 
-<!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. -->
+![문제풀이5](./images/week6-9.png)
 
 ---
 
