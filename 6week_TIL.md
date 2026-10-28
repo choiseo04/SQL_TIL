@@ -82,7 +82,7 @@ LEFT/RIGHT JOIN (ON 필수)
 FULL JOIN (ON 필수)
 - SELECT col FROM table_a AS A FULL JOIN table_b AS B ON A.key = B.key
 CROSS JOIN (ON 선택)
-- SELECT col FROm table_a AS A CROSS JOIN table_b AS B
+- SELECT col FROM table_a AS A CROSS JOIN table_b AS B
 ```
 
 ## 02.
@@ -91,6 +91,7 @@ CROSS JOIN (ON 선택)
 개념 이름: JOIN Key
 개념 설명: JOIN 하고자 하는 테이블들에 공통적으로 존재하는 컬럼. 이것이 있어야 JOIN할 수 있음. 공통적으로 존재하는 컬럼(=key)이 있다면, JOIN할 수 있으며, 보통 id 값을 key로 많이 사용하고 특정 범위로 JOIN도 가능함. 
 예시 쿼리:
+SELECT A.col1, A.col2, B.col1 1, B.col1 2 FROM table 1 AS A LEFT JOIN table2 AS B ON A.key = B.key #Alias 사용할 수 있음.
 ```
 
 ## (선택) 03.
@@ -124,9 +125,9 @@ CROSS JOIN (ON 선택)
 풀이 과정:
 
 ```
-- 사용한 테이블:
-- JOIN key:
-- 날짜를 출력한 형식:
+- 사용한 테이블: BOOK 테이블과 AUTHOR 테이블 
+- JOIN key: AUTHOR_ID
+- 날짜를 출력한 형식: YYYY-MM-DD
 ```
 
 <!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. -->
@@ -138,9 +139,9 @@ CROSS JOIN (ON 선택)
 풀이 과정:
 
 ```
-- 연결한 테이블:
-- JOIN key:
-- 집계한 값:
+- 연결한 테이블: PRODUCT 테이블, OFFLINE_SALE
+- JOIN key: PRODUCT_ID
+- 집계한 값: SUM(PRICE * SALES_AMOUNT)
 ```
 
 <!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. -->
@@ -152,9 +153,9 @@ CROSS JOIN (ON 선택)
 풀이 과정:
 
 ```
-- 기준이 되는 왼쪽 테이블:
-- LEFT JOIN이 필요한 이유:
-- NULL이 발생하는 경우:
+- 기준이 되는 왼쪽 테이블: ANIMAL_OUTS 테이블
+- LEFT JOIN이 필요한 이유: 입양 기록은 유지하면서 보호소에 들어온 기록이 없는 동물을 찾기 위해서 필요하다. 
+- NULL이 발생하는 경우: ANIMAL_ID는 존재하는데(보호소에 들어온 기록은 존재하는데) 이름이 NULL인 경우 
 ```
 
 <!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. -->
@@ -166,10 +167,10 @@ CROSS JOIN (ON 선택)
 풀이 과정:
 
 ```
-- 사용한 테이블:
-- JOIN key:
-- 비교한 날짜 컬럼:
-- 정렬 기준:
+- 사용한 테이블: ANIMAL_INS 테이블, ANIMAL_OUTS 테이블
+- JOIN key: ANIMAL_ID
+- 비교한 날짜 컬럼: ANIMAL_INS의 DATETIME(보호시작일)과 ANIMAL_OUTS의 DATETIME(입양일)
+- 정렬 기준: A(ANIMAL_INS).DATETIME ASC(오름차순)
 ```
 
 <!-- 정답을 맞추게 되면, 정답입니다. 이 부분을 캡처해서 이 주석을 지우시고 첨부해주시면 됩니다. -->
@@ -188,9 +189,9 @@ JOIN 개념이 헷갈린다면 아래 자료를 함께 참고해도 좋습니다
 # 5️⃣ 이번 주 회고
 
 ```
-1. INNER JOIN과 LEFT JOIN의 차이를 어떻게 이해했는지:
-2. JOIN 문제를 풀 때 가장 먼저 확인해야 할 것:
-3. JOIN 결과가 예상과 달랐던 경험이 있다면:
+1. INNER JOIN과 LEFT JOIN의 차이를 어떻게 이해했는지: inner join은 두 테이블의 공통 요소만 연결하는 것이라면 left join은 왼쪽 테이블이 될 테이블을 정하고 왼쪽 테이블 기준으로 연결하는 것이다. inner join은 위치와 상관없이 동일한 값이 나오지만 left join은 왼쪽 테이블이 무엇이냐에 따라서 값이 달라질 수 있다. 
+2. JOIN 문제를 풀 때 가장 먼저 확인해야 할 것: LEFT JOIN 사용 시 기준이 될 왼쪽 테이블 정하기.  
+3. JOIN 결과가 예상과 달랐던 경험이 있다면: 3번 문제를 풀 때 조인키를 잘못 지정하여 예상과 다른 결과가 나왔다. 단순히 두 테이블의 공통 요소라고 해서 조인키로 지정하는 것이 아니라 문제가 요구하는 것과 해당 컬럼의 Null 여부 등을 고려하여 조인키를 지정해야 한다는 것을 깨달았다. 
 ```
 
 수고하셨습니다!
